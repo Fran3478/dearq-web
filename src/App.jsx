@@ -9,8 +9,8 @@ function App() {
       <Header />
       <div className="max-w-screen mt-[3.5rem] sm:mt-[5rem] md:mt-[9rem] lg:mt-[5.6rem]">
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="*" element={<NotFound />} />
+          <Route path="dearq-web/" element={<Home />} />
+          <Route path="dearq-web/*" element={<NotFound />} />
         </Routes>
       </div>
     </>
