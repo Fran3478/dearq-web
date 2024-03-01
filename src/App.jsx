@@ -1,9 +1,18 @@
+import { Routes, Route } from "react-router-dom"
+import Header from "./components/header/Header"
+import Home from "./components/home/Home"
+import NotFound from "./components/errors/NotFound"
 
 function App() {
-
   return (
     <>
-
+      <Header />
+      <div className="max-w-screen mt-[3.5rem] sm:mt-[5rem] md:mt-[9rem] lg:mt-[5.6rem]">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </div>
     </>
   )
 }
