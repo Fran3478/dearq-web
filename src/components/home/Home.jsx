@@ -29,7 +29,7 @@ const Home = () => {
     return (
         <div className="">
             <h1 className="text-3xl md:text-5xl font-tt-commons-pro-expanded-bold font-bold text-center py-14 mx-8">Transformando Espacios, Sanando Emociones</h1>
-            <div className="max-w-3xl m-auto">
+            <div className="max-w-3xl m-auto aspect-[768/602]">
                 <Carrusel autoSlide={true}>
                     {slides.map((slide) => (
                         <div key={slide.id} className="min-w-full relative">
@@ -39,22 +39,19 @@ const Home = () => {
                     ))}
                 </Carrusel>
             </div>
-            <div className="flex flex-col font-tt-commons-pro-expanded-bold">
-                <div className="w-full lg:pl-[8rem] xl:pl-[12rem]">
-                    <h2 className=" order-2 lg:order-1 text-center text-2xl md:text-4xl font-semibold my-[5rem] underline underline-offset-4 decoration-[#f2840a] decoration-4 w-fit m-auto">¿Qué es <span className="italic">DEArq</span>?</h2>
-                    <div className="order-1 lg:order-2 w-full lg:float-right lg:w-3/5 xl:max-w-[50%]">
-                        <Quote
-                            imgUrl={quoteInfo.imgUrl}
-                            quote={quoteInfo.quote}
-                            name={quoteInfo.name}
-                            degree={quoteInfo.degree}
-                        />
-                    </div>
-                    <p className="text-base md:text-2xl px-[1.5rem] md:px-[3rem] lg:pr-[8rem] xl:pr-[12rem]">DEArq es mucho más que un estudio de arquitectura. Es un espacio donde convergen la pasión por el diseño y
-                        el profundo deseo de ayudar a las personas a través de la transformación de sus entornos físicos. Utilizando
-                        los principios de la neuroarquitectura, <span className="font-bold">nos especializamos en crear espacios auténticos y significativos que
-                            promueven la sanación, el equilibrio emocional y la sensación de bienestar</span>.
-                    </p>
+            <div className="font-tt-commons-pro-expanded-bold ">
+                <div className="w-full">
+                    <h2 className="text-xl md:text-3xl font-semibold my-[1.5rem] md:my-[3rem] w-fit m-auto px-[2rem] md:px-[3rem] text-center">¡Convierte tu Hogar en un Refugio de Bienestar!</h2>
+                    <p className="text-base sm:text-lg px-[1.5rem] md:px-[3rem] mb-[2rem] hyphens-auto">En DEArq, estamos aquí para ayudarte a crear un ambiente que te haga sentir en casa y te permita conectar emocionalmente con tu entorno. ¡No dudes en contactarnos para comenzar tu viaje hacia la transformación de tus espacios! ¡Descubre el Poder Transformador del Diseño Emocional!</p>
+
+                </div>
+                <div className="w-full lg:float-right lg:w-3/5 xl:max-w-[50%]">
+                    <Quote
+                        imgUrl={quoteInfo.imgUrl}
+                        quote={quoteInfo.quote}
+                        name={quoteInfo.name}
+                        degree={quoteInfo.degree}
+                    />
                 </div>
             </div>
         </div>
