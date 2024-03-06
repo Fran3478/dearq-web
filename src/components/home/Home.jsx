@@ -39,13 +39,13 @@ const Home = () => {
                     ))}
                 </Carrusel>
             </div>
-            <div className="font-tt-commons-pro-expanded-bold ">
+            <div className="font-tt-commons-pro-expanded-bold relative">
                 <div className="w-full">
                     <h2 className="text-xl md:text-3xl font-semibold my-[1.5rem] md:my-[3rem] w-fit m-auto px-[2rem] md:px-[3rem] text-center">¡Convierte tu Hogar en un Refugio de Bienestar!</h2>
                     <p className="text-base sm:text-lg px-[1.5rem] md:px-[3rem] mb-[2rem] hyphens-auto">En DEArq, estamos aquí para ayudarte a crear un ambiente que te haga sentir en casa y te permita conectar emocionalmente con tu entorno. ¡No dudes en contactarnos para comenzar tu viaje hacia la transformación de tus espacios! ¡Descubre el Poder Transformador del Diseño Emocional!</p>
 
                 </div>
-                <div className="w-full lg:float-right lg:w-3/5 xl:max-w-[50%]">
+                <div className="ml-auto lg:w-3/5 xl:max-w-[50%]">
                     <Quote
                         imgUrl={quoteInfo.imgUrl}
                         quote={quoteInfo.quote}
