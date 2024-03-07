@@ -37,6 +37,7 @@ const Home = () => {
         <div className="max-w-screen">
             <h1 className="text-3xl md:text-5xl font-tt-commons-pro-expanded-bold font-bold w-fit m-auto py-14">Transformando Espacios, Sanando Emociones</h1>
             <Carrusel slides={slides} autoSlide={true} />
+
             <div className="font-tt-commons-pro-expanded-bold relative pb-[2rem]">
                 <div className="w-full">
                     <h2 className="text-xl md:text-3xl font-semibold my-[1.5rem] md:my-[3rem] w-fit m-auto px-[2rem] md:px-[3rem] text-center">¡Convierte tu Hogar en un Refugio de Bienestar!</h2>
