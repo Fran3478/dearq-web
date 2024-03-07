@@ -16,7 +16,14 @@ const Home = () => {
             title1: "Espacios ",
             span: "conscientemente",
             title2: " diseñados"
-        }
+        },
+        {
+            id: "architecture2",
+            url: "https://res.cloudinary.com/dacbde3so/image/upload/e_improve:indoor:100/dearq-img/fubiukyj0xetbnnvjlso.jpg",
+            title1: "Diseño ",
+            span: "emocional",
+            title2: " arquitectónico"
+        },
     ]
 
     const quoteInfo = {
@@ -27,18 +34,10 @@ const Home = () => {
     }
 
     return (
-        <div className="">
-            <h1 className="text-3xl md:text-5xl font-tt-commons-pro-expanded-bold font-bold text-center py-14 mx-8">Transformando Espacios, Sanando Emociones</h1>
-            <div className="max-w-3xl m-auto aspect-[768/602]">
-                <Carrusel autoSlide={true}>
-                    {slides.map((slide) => (
-                        <div key={slide.id} className="min-w-full relative">
-                            <img src={slide.url} alt="" className="w-full" />
-                            <p className="text-center text-xl sm:text-3xl font-semibold italic py-[1.5rem] static">{slide.title1} <span className="before:block before:absolute before:-inset-1 before:-skew-y-3 before:bg-[#f2840a] relative inline-block"><span className="relative text-white">{slide.span}</span></span> {slide.title2}</p>
-                        </div>
-                    ))}
-                </Carrusel>
-            </div>
+        <div className="max-w-screen">
+            <h1 className="text-3xl md:text-5xl font-tt-commons-pro-expanded-bold font-bold w-fit m-auto py-14">Transformando Espacios, Sanando Emociones</h1>
+            <Carrusel slides={slides} autoSlide={true} />
+
             <div className="font-tt-commons-pro-expanded-bold relative pb-[2rem]">
                 <div className="w-full">
                     <h2 className="text-xl md:text-3xl font-semibold my-[1.5rem] md:my-[3rem] w-fit m-auto px-[2rem] md:px-[3rem] text-center">¡Convierte tu Hogar en un Refugio de Bienestar!</h2>
