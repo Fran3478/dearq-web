@@ -11,7 +11,7 @@ const Header = () => {
     }
     return (
         <>
-            <div className="fixed top-0 left-0 max-w-screen w-screen h-[3.5rem] sm:h-[5rem] md:h-[9rem] lg:h-[5.6rem] flex md:flex-col lg:flex-row p-3 md:p-6 bg-slate-200 select-none z-50">
+            <div className="sticky top-0 left-0 min-w-screen w-full h-[3.5rem] sm:h-[5rem] md:h-[9rem] lg:h-[5.6rem] flex md:flex-col lg:flex-row p-3 md:p-6 bg-gray-50 shadow-md shadow-black/10 select-none z-20">
                 <div className="flex md:hidden">
                     <MenuButton handleActiveMenu={handleActiveMenu} activeMenu={activeMenu} />
                 </div>
@@ -21,7 +21,7 @@ const Header = () => {
                 </div>
                 <Navbar />
             </div>
-            <div className={`fixed top-[3.5rem] sm:top-[5rem] z-40 min-w-screen ${!activeMenu && "-top-full"} transition-all duration-300`}>
+            <div className={`fixed z-10 min-w-screen ${!activeMenu && "-top-full"} transition-all duration-300`}>
                 <MenuContent handleActiveMenu={handleActiveMenu} activeMenu={activeMenu} />
             </div>
         </>
