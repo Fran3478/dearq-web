@@ -7,17 +7,15 @@ import About from "./components/about/About"
 
 function App() {
   return (
-    <>
+    <div className="flex flex-col min-h-[100vh]">
       <Header />
-      <div className="max-w-screen mt-[3.5rem] sm:mt-[5rem] md:mt-[9rem] lg:mt-[5.6rem]">
-        <Routes>
-          <Route path="dearq-web/" element={<Home />} />
-          <Route path="dearq-web/about" element={<About />} />
-          <Route path="dearq-web/*" element={<NotFound />} />
-        </Routes>
-      </div>
+      <Routes>
+        <Route path="dearq-web/" element={<Home />} />
+        <Route path="dearq-web/about" element={<About />} />
+        <Route path="dearq-web/*" element={<NotFound />} />
+      </Routes>
       <Footer />
-    </>
+    </div>
   )
 }
 
