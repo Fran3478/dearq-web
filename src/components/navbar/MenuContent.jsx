@@ -10,7 +10,7 @@ const MenuContent = ({ handleActiveMenu, activeMenu }) => {
     }
 
     return (
-        <div className={`md:hidden h-screen ${!activeMenu && "hidden"}`} onClick={handleActiveMenu}>
+        <div className={`md:hidden sticky h-screen mt-[3.5rem] sm:mt-[5rem] md:mt-[9rem] ${!activeMenu && "hidden"}`} onClick={handleActiveMenu}>
             <div className={`w-screen grid grid-cols-12 sm:grid-cols-6 bg-slate-100 pb-6`}>
                 <div className="col-start-2 col-span-10 sm:col-start-2 sm:col-span-4 rounded-b-md p-6">
                     <div className="w-3/4 sm:w-2/4 m-auto text-2xl md:text-3xl text-white flex flex-col justify-center">
