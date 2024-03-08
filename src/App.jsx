@@ -10,9 +10,9 @@ function App() {
     <div className="flex flex-col min-h-[100vh]">
       <Header />
       <Routes>
-        <Route path="dearq-web/" element={<Home />} />
-        <Route path="dearq-web/about" element={<About />} />
-        <Route path="dearq-web/*" element={<NotFound />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/*" element={<NotFound />} />
       </Routes>
       <Footer />
     </div>
