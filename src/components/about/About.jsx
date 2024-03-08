@@ -22,7 +22,7 @@ const About = () => {
                             <div className="w-fit mr-[1.5rem]">
                                 <Image img={user} alt={"Arq-Alejandra"} />
                                 <div className="text-center">
-                                    <p className="font-semibold text-nowrap" >Alejandra...</p>
+                                    <p className="font-semibold text-nowrap" >Alejandra Elizabeth Gomez</p>
                                     <p className="text-gray-600" >Fundadora</p>
                                 </div>
                             </div>
