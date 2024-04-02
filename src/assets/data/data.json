@@ -1,0 +1,31 @@
+{
+    "about": [
+        {
+            "id": 1,
+            "text": "Durante muchos años, me dediqué apasionadamente a la arquitectura convencional y años posteriores emprendí en un rubro ajeno a mi formación, pero del cual también aprendí mucho. Sin embargo, un acontecimiento personal inesperado en mi vida me llevó a transitar un arduo proceso de cambios y me encontré enfrentando una situación que me dejó por momentos perdida. Pero, con el amor y el apoyo de mis seres queridos, así como con un esfuerzo incansable por superar esta difícil etapa, descubrí una nueva pasión: la neuroarquitectura",
+            "bg_img" : "https://res.cloudinary.com/dacbde3so/image/upload/v1711144402/dearq-img/hcik9ftqfcrwbtxsgnuf.webp"
+        },
+        {
+            "id": 2,
+            "text": "Fue a través de la neuroarquitectura que comencé a entender el profundo impacto que nuestros entornos físicos tienen en nuestras emociones y bienestar. Empecé a aplicar estos principios en mi propia vida, buscando recuperar mi identidad y encontrar un nuevo equilibrio emocional. Y así, poco a poco, comencé a ver los resultados transformadores",
+            "bg_img" : "https://res.cloudinary.com/dacbde3so/image/upload/v1711144403/dearq-img/d1xtcc2wdxiu5xr01ooo.webp",
+            "bg_size": "contain"
+        },
+        {
+            "id": 3,
+            "text": "Decidí dedicarme a ayudar a otras personas que estén atravesando situaciones emocionales difíciles, traumáticas o simplemente estén en busca de un cambio. Mi objetivo es ofrecer una cuidadosa escucha, comprensión y diseño de espacios auténticos y significativos que fomenten la sanación y el bienestar emocional",
+            "bg_img" : "https://res.cloudinary.com/dacbde3so/image/upload/v1711144403/dearq-img/gs0kevrqwadxctfnwogr.webp",
+            "bg_size": "contain"
+        },
+        {
+            "id": 4,
+            "text": "Pero mi viaje no terminó ahí. También redescubrí una pasión olvidada por la pintura, el arte es donde encuentro una profunda felicidad y plenitud. Por eso, he decidido incorporar al proyecto el diseño de cuadros y elementos decorativos que transmitan emociones y sensaciones a quienes los contemplen",
+            "bg_img" : "https://res.cloudinary.com/dacbde3so/image/upload/v1711144403/dearq-img/lv0uxpl6eplka5uxczhz.webp"
+        },
+        {
+            "id": 5,
+            "text": "Creo firmemente en la importancia de crear espacios que generen experiencias emocionales y se conviertan en refugios de bienestar y confort. Estoy emocionada de poder acompañarte en este proceso de transformación y ayudarte a crear un ambiente que refleje tu historia y te haga sentir en casa",
+            "bg_img" : "https://res.cloudinary.com/dacbde3so/image/upload/v1711144403/dearq-img/fg3628hm1dfpjlwh2imj.webp"
+        }
+    ]
+}

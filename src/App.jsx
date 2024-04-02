@@ -4,6 +4,7 @@ import Home from "./components/home/Home"
 import NotFound from "./components/errors/NotFound"
 import Footer from "./components/footer/Footer"
 import About from "./components/about/About"
+import Service from "./components/service/Service"
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
+        <Route path="/services" element={<Service />} />
         <Route path="/*" element={<NotFound />} />
       </Routes>
       <Footer />
