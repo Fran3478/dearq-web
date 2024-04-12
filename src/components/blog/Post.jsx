@@ -11,7 +11,7 @@ const Post = ({post, odd}) => {
                 <div className="grid grid-cols-2">
                     <div className="w-[85%] m-auto">
                         <div className="relative w-[31rem] h-[20rem] overflow-hidden">
-                            <div className="absolute w-[150%] h-[100%] -left-5 bg-[#dfb15b] inset-y-1 skew-y-[7deg] origin-bottom-left mt-[10rem]"></div>
+                            <div className="absolute w-[150%] h-[100%] -left-5 bg-gradient-to-br from-[#f2840a] via-[#fed531] to-[#dfb15b] inset-y-1 skew-y-[7deg] origin-bottom-left mt-[10rem]"></div>
                             <p className="absolute bottom-0 m-[1rem] text-white text-3xl font-semibold w-[60%]">{post.img_title}</p>
                             <img className="object-cover w-[31rem] h-[20rem] m-auto overflow-hidden" src={post.img} alt={post.imgAlt} />
                         </div>
