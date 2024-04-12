@@ -1,4 +1,7 @@
 import PropTypes from "prop-types"
+import Button from "../buttons/Button"
+import { AiOutlineArrowRight } from "react-icons/ai";
+
 
 const Post = ({post, odd}) => {
     console.log(post.img_title)
@@ -11,14 +14,16 @@ const Post = ({post, odd}) => {
                 <div className="grid grid-cols-2">
                     <div className="w-[85%] m-auto">
                         <div className="relative w-[31rem] h-[20rem] overflow-hidden">
-                            <div className="absolute w-[150%] h-[100%] -left-5 bg-gradient-to-br from-[#f2840a] via-[#fed531] to-[#dfb15b] inset-y-1 skew-y-[7deg] origin-bottom-left mt-[10rem]"></div>
-                            <p className="absolute bottom-0 m-[1rem] text-white text-3xl font-semibold w-[60%]">{post.img_title}</p>
+                            <div className="absolute w-[150%] h-[100%] -left-5 bg-gradient-to-br from-[#f2840a] via-[#fed531] to-[#dfb15b] inset-y-1 skew-y-[7deg] origin-bottom-left mt-[11.5rem]"></div>
+                            <p className="absolute bottom-0 m-[1rem] text-white text-3xl font-semibold w-[60%] h-[25%]">{post.img_title}</p>
                             <img className="object-cover w-[31rem] h-[20rem] m-auto overflow-hidden" src={post.img} alt={post.imgAlt} />
                         </div>
                     </div>
                     <div className="w-[85%] m-auto flex flex-col">
                         <p className="text-xl" >{post.intro}</p>
-                        <button className="bg-[#ff8211] text-white text-xl px-[1.5rem] py-[0.5rem] rounded-md w-fit mr-auto mt-[3rem]" >Leer más</button>
+                        <div className="mt-[3rem]">
+                            <Button text={"Leer más"} icon={<AiOutlineArrowRight/>}/>
+                        </div>
                     </div>
                 </div>
 

@@ -1,4 +1,5 @@
 import { useState } from "react"
+import Button from "../buttons/Button"
 
 const Form = () => {
     const [name, setName] = useState("")
@@ -27,11 +28,9 @@ const Form = () => {
                     <option className="text-black" value="another">Otro</option>
                 </select>
                 <textarea name="message" placeholder="Ingrese su mensaje" className="resize-none rounded p-[0.4rem] my-[1.5rem]  outline-none" rows={4} value={message}  onChange={(e) => setMessage(e.target.value)}></textarea>
-                <button 
-                    className="rounded-full bg-white text-[#f2840a] text-lg font-semibold w-fit m-auto py-[0.4rem] px-[2rem] mb-[2rem] transition-all hover:text-white hover:bg-[#f2840a] hover:shadow-[-1px_-1px_5px_rgba(255,_255,_255,_0.6),_1px_1px_5px_rgba(0,_0,_0,_0.3),inset_-2px_-2px_5px_rgba(255,_255,_255,_1),inset_2px_2px_4px_rgba(0,_0,_0,_0.3)]"
-                >
-                    Enviar
-                </button>
+                <div className="m-auto mb-[2rem]">
+                    <Button text={"Enviar"} />
+                </div>
             </div>
             
     )
