@@ -43,30 +43,17 @@ const Home = () => {
     return (
         <div className="min-w-screen w-full">
             {/* <Carrusel slides={slides} autoSlide={true} /> */}
-            <div className="mt-[4rem]">
-                <ColumnView columns={slides}/>
-            </div>
-            <div className="mt-[4rem]">
-                <ColumnView_v2 columns={slides}/>
-            </div>
-            <div className="mt-[4rem]">
-                <ColumnView_v15 columns={slides}/>
-            </div>
+            <h1 className="text-3xl md:text-5xl font-tt-commons-pro-expanded-bold font-bold w-fit m-auto my-[2rem]">Diseño emocional arquitectónico</h1>
+            
             <div className="mt-[4rem]">
                 <ColumnView_v25 columns={slides}/>
             </div>
-            <div className="mt-[4rem]">
-                <ColumnView_v3 columns={slides}/>
-            </div>
-            <div className="mt-[4rem]">
-                <ColumnView_v4 columns={slides}/>
-            </div>
-            <h1 className="text-3xl md:text-5xl font-tt-commons-pro-expanded-bold font-bold w-fit m-auto my-[2rem]">Diseño emocional arquitectónico</h1>
+            
 
             <div className="font-tt-commons-pro-expanded-bold relative pb-[2rem]">
                 <div className="w-full">
                     <div className="py-[1.5rem] md:w-[85%] lg:w-[85%] m-auto rounded-md">
-                        <h2 className="text-xl underline underline-offset-4 decoration-[#f2840a] decoration-2 w-fit m-auto pb-[1rem]">¿Qué es <span className="font-semibold">DEArq</span>?</h2>
+                        <h2 className="text-4xl w-fit m-auto pb-[1rem]">¿Qué es <span className="font-semibold">DEArq</span>?</h2>
                         <p className="tracking-tight leading-tight">DEArq es mucho más que un estudio de arquitectura, es un espacio donde convergen la pasión por el diseño y el profundo deseo de ayudar a las personas a través de la transformación de sus entornos físicos. Utilizando los principios de la neuroarquitectura, <span className="font-semibold">nos especializamos en crear espacios auténticos y significativos que promueven la sanación, el equilibrio emocional y la sensación de bienestar</span>.</p>
                         <p className="tracking-tight leading-tight">Estamos aquí para ayudarte a crear un ambiente que te haga sentir en casa y te permita conectar emocionalmente con tu entorno. ¡No dudes en contactarnos para comenzar tu viaje hacia la transformación de tus espacios!</p>
                     </div>
