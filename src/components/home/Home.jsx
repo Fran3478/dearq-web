@@ -1,50 +1,77 @@
-import Quote from "../quote/Quote"
-import Carrusel from "../carrusel/Carrusel"
+import ColumnView from "./ColumnView"
+import ColumnView_v2 from "./ColumnView_v2"
+import ColumnView_v15 from "./ColumnView_v15"
+import ColumnView_v25 from "./ColumnView_v25"
+import ColumnView_v3 from "./ColumnView_v3"
+import ColumnView_v4 from "./ColumnView_v4"
+import Quote from "./Quote"
+
+// import Carrusel from "../carrusel/Carrusel"
 
 const Home = () => {
     const slides = [
         {
-            id: "architecture",
-            url: "https://res.cloudinary.com/dacbde3so/image/upload/e_improve:indoor:100/dearq-img/fubiukyj0xetbnnvjlso.jpg",
-            title1: "Diseño ",
-            span: "emocional",
-            title2: " arquitectónico"
+            id: "1",
+            url: "https://res.cloudinary.com/dacbde3so/image/upload/v1711567499/dearq-img/home/twj2aqun2ymhnlmihux5.webp",
+            title: "Espacios conscientemente diseñados"
         },
         {
-            id: "design",
-            url: "https://res.cloudinary.com/dacbde3so/image/upload/v1708701350/dearq-img/itaxj9km8kyfnvp9h1kd.jpg",
-            title1: "Espacios ",
-            span: "conscientemente",
-            title2: " diseñados"
+            id: "2",
+            url: "https://res.cloudinary.com/dacbde3so/image/upload/v1711556588/dearq-img/home/ffmy3z7wr8wul7cyq5rx.webp",
+            title: "¡Convierte tu Hogar en un Refugio de Bienestar!"
         },
         {
-            id: "architecture2",
-            url: "https://res.cloudinary.com/dacbde3so/image/upload/e_improve:indoor:100/dearq-img/fubiukyj0xetbnnvjlso.jpg",
-            title1: "Diseño ",
-            span: "emocional",
-            title2: " arquitectónico"
+            id: "3",
+            url: "https://res.cloudinary.com/dacbde3so/image/upload/v1711567499/dearq-img/home/likgwes1gczitinh5zah.webp",
+            title: "¡Descubre el poder transformador del diseño emocional!"
         },
+        {
+            id: "4",
+            url: "https://res.cloudinary.com/dacbde3so/image/upload/v1711556588/dearq-img/home/wj1grscjsmwctqckbyk3.webp",
+            title: "Conecta emocionalmente con tu entorno"
+        }
     ]
 
     const quoteInfo = {
         quote: "¿Sabías que los espacios fisicos en los que vivimos tienen un impacto significativo en el bienestar?",
         name: "Oshin Vartanian",
+        alt: "Oshin-Vartanian",
         degree: "Psicologo e Investigador de neurociencia cognitiva y neuroestetica",
-        imgUrl: "https://res.cloudinary.com/dacbde3so/image/upload/v1708617358/dearq-img/be8jqziafgfisglx1hte.png"
+        imgUrl: "https://res.cloudinary.com/dacbde3so/image/upload/v1711467872/dearq-img/vttujl7z99ba2unodmvx.webp"
     }
 
     return (
-        <div className="max-w-screen">
-            <h1 className="text-3xl md:text-5xl font-tt-commons-pro-expanded-bold font-bold w-fit m-auto py-14">Transformando Espacios, Sanando Emociones</h1>
-            <Carrusel slides={slides} autoSlide={true} />
+        <div className="min-w-screen w-full">
+            {/* <Carrusel slides={slides} autoSlide={true} /> */}
+            <div className="mt-[4rem]">
+                <ColumnView columns={slides}/>
+            </div>
+            <div className="mt-[4rem]">
+                <ColumnView_v2 columns={slides}/>
+            </div>
+            <div className="mt-[4rem]">
+                <ColumnView_v15 columns={slides}/>
+            </div>
+            <div className="mt-[4rem]">
+                <ColumnView_v25 columns={slides}/>
+            </div>
+            <div className="mt-[4rem]">
+                <ColumnView_v3 columns={slides}/>
+            </div>
+            <div className="mt-[4rem]">
+                <ColumnView_v4 columns={slides}/>
+            </div>
+            <h1 className="text-3xl md:text-5xl font-tt-commons-pro-expanded-bold font-bold w-fit m-auto my-[2rem]">Diseño emocional arquitectónico</h1>
 
             <div className="font-tt-commons-pro-expanded-bold relative pb-[2rem]">
                 <div className="w-full">
-                    <h2 className="text-xl md:text-3xl font-semibold my-[1.5rem] md:my-[3rem] w-fit m-auto px-[2rem] md:px-[3rem] text-center">¡Convierte tu Hogar en un Refugio de Bienestar!</h2>
-                    <p className="text-base sm:text-lg px-[1.5rem] md:px-[3rem] mb-[2rem] hyphens-auto">En DEArq, estamos aquí para ayudarte a crear un ambiente que te haga sentir en casa y te permita conectar emocionalmente con tu entorno. ¡No dudes en contactarnos para comenzar tu viaje hacia la transformación de tus espacios! ¡Descubre el Poder Transformador del Diseño Emocional!</p>
-
+                    <div className="py-[1.5rem] md:w-[85%] lg:w-[85%] m-auto rounded-md">
+                        <h2 className="text-xl underline underline-offset-4 decoration-[#f2840a] decoration-2 w-fit m-auto pb-[1rem]">¿Qué es <span className="font-semibold">DEArq</span>?</h2>
+                        <p className="tracking-tight leading-tight">DEArq es mucho más que un estudio de arquitectura, es un espacio donde convergen la pasión por el diseño y el profundo deseo de ayudar a las personas a través de la transformación de sus entornos físicos. Utilizando los principios de la neuroarquitectura, <span className="font-semibold">nos especializamos en crear espacios auténticos y significativos que promueven la sanación, el equilibrio emocional y la sensación de bienestar</span>.</p>
+                        <p className="tracking-tight leading-tight">Estamos aquí para ayudarte a crear un ambiente que te haga sentir en casa y te permita conectar emocionalmente con tu entorno. ¡No dudes en contactarnos para comenzar tu viaje hacia la transformación de tus espacios!</p>
+                    </div>
                 </div>
-                <div className="ml-auto lg:w-3/5 xl:max-w-[50%]">
+                <div className="ml-auto mt-[1.5rem] lg:w-3/5 xl:max-w-[50%]">
                     <Quote
                         imgUrl={quoteInfo.imgUrl}
                         quote={quoteInfo.quote}
