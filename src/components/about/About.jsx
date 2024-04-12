@@ -10,7 +10,7 @@ const About = () => {
                 <section>
                     <div className="flex flex-col md:flex-row m-auto my-[1.5rem] md:gap-[2.5rem] md:w-[90%] lg:w-[80%]">
                         <div className="">
-                            <UserImage img={user} alt={"Arq-Alejandra"} userName={"Alejandra Elizabeth Gomez"} userRole={"Fundadora"} style={"round"}/>
+                            <UserImage img={user} alt={"Arq-Alejandra"} userName={"Alejandra Elizabeth Gomez"} userRole={"Directora Creativa"} style={"round"}/>
                         </div>
                         <div className="px-[2rem] mt-[1rem] md:m-auto">
                             <p className="">Hola! Me llamo Alejandra, y te quiero dar una cálida bienvenida a DEArq y, también, si me lo permitís me encantaría compartir un poco sobre mi y lo que me llevo hacia el diseño emocional y la arquitectura consciente:</p>

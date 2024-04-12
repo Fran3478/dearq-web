@@ -1,6 +1,4 @@
-import Card from "./CardService"
 import Container from "./Container"
-
 
 const Service = () => {
     const serviceData = [
