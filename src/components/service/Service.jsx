@@ -106,8 +106,10 @@ const Service = () => {
     ]
     return (
         <div className="">
-            <p className="w-fit ml-[7rem] mt-[2rem]">En DEArq nos encanta que te sientas comodo y conectado con tu hogar, por lo que te ofrecemos un servicio integral de diseño que abarca:</p>
-            <Container items={serviceData} type={"service"}/>
+            <div className="flex flex-col max-w-max m-auto">
+                <p className="w-fit mt-[2rem]">En DEArq nos encanta que te sientas comodo y conectado con tu hogar, por lo que te ofrecemos un servicio integral de diseño que abarca:</p>
+                <Container items={serviceData} type={"service"}/>
+            </div>
             {/* <div className="grid grid-cols-3 gap-[5rem] w-fit m-auto my-[3rem]">
                 {
                     serviceData.map((item) => (
@@ -115,8 +117,10 @@ const Service = () => {
                     ))
                 }
             </div> */}
-            <p className="w-fit ml-[7rem] mt-[2rem]">Para ofrecerte nuestros increíbles servicios utilizamos variadas herramientas de diseño para brindarte la mejor experiencia posible adaptando a tus necesidades:</p>
-            <Container items={toolData} type={"tool"}/>
+            <div className="flex flex-col max-w-max m-auto">
+                <p className="w-fit mt-[2rem]">Para ofrecerte nuestros increíbles servicios utilizamos variadas herramientas de diseño para brindarte la mejor experiencia posible adaptando a tus necesidades:</p>
+                <Container items={toolData} type={"tool"}/>
+            </div>
             {/* <div className="grid grid-cols-4 gap-[4rem] w-fit m-auto my-[3rem]">
                 {
                     toolData.map((item) => (
