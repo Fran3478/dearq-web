@@ -1,6 +1,6 @@
 import { BsInstagram, BsFacebook, BsTwitterX, BsLinkedin } from "react-icons/bs";
 
-const SocialButtons = () => {
+const Social = () => {
     return (
         <div className="flex w-full text-2xl">
             <a className="mx-[1rem]" href="https://www.instagram.com/andromeda.crea/" target="_blank" rel="noreferrer"><BsInstagram /></a>
@@ -11,4 +11,4 @@ const SocialButtons = () => {
     )
 }
 
-export default SocialButtons
+export default Social
