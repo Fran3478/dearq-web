@@ -3,7 +3,7 @@ import { BsWhatsapp, BsEnvelopeFill, BsGeoAltFill } from "react-icons/bs";
 const Contact = () => {
 
     return (
-        <div className="flex flex-col 2xl:flex-row text-center">
+        <div className="flex flex-col 2xl:flex-row text-center m-auto w-fit">
             <div className="flex">
                 <div className="pr-3 text-lg my-auto"><BsEnvelopeFill /></div>
                 <a href="mailto:infodearq@gmail.com" target="_blank" rel="noreferrer" className="w-fit">
