@@ -1,49 +1,55 @@
-import SocialButtons from "./SocialButtons";
-import ContactButtons from "./ContactButtons";
-import SubscribeButton from "./SubscribeButton";
+import Social from "./Social";
+import Contact from "./Contact";
+import Subscribe from "./Subscribe";
 import Logo from "./Logo";
 
 
 const Footer = () => {
 
-
     return (
-        <div className="min-w-screen w-full bg-[#4E5152] text-white">
-            <div className="flex justify-evenly">
-                <div className="my-auto">
-                    <SubscribeButton />
+        <div className="min-w-screen w-full bg-[#4E5152] text-white flex justify-center p-[1rem] xxs:px-[2rem] md:p-[1rem] 2xl:p-0">
+            <div className="flex flex-col gap-[1.8rem] md:gap-[1rem] m-auto grow">
+                <div className="md:flex md:gap-[1.8rem] md:mx-[1.8rem] 2xl:mx-[2rem] 2xl:my-[1rem]">
+                    <div className="md:grow">
+                        <Subscribe />
+                    </div>
+                    <div className="md:flex md:w-[50%] xl:w-[60%]">
+                        <div className="hidden ml:block w-[2px] self-stretch bg-gradient-to-tr from-transparent via-neutral-400 to-transparent opacity-25"></div>
+                        <div className="hidden md:block md:m-auto">
+                            <Contact/>
+                        </div>
+                        <div className="hidden ml:block xl:hidden w-[2px] self-stretch bg-gradient-to-tr from-transparent via-neutral-400 to-transparent opacity-25"></div>
+                        <div className="hidden md:block md:m-auto">
+                            <Social/>
+                        </div>
+                        <div className="hidden lg:block xl:hidden w-[2px] self-stretch bg-gradient-to-tr from-transparent via-neutral-400 to-transparent opacity-25"></div>
+                        <div className="hidden lg:block lg:m-auto">
+                            <Logo />
+                        </div>
+                    </div>
                 </div>
-                <div className="w-px self-stretch bg-gradient-to-tr from-transparent via-neutral-500 to-transparent opacity-25 dark:via-neutral-400"></div>
-                <div className="my-[1rem]">
-                    <ContactButtons />
+                <div className="my-auto xs:flex xs:gap-[1.8rem] md:hidden">
+                    <div className="mr-auto">
+                        <Contact />
+                    </div>
+                    <div className="hidden xs:block md:hidden w-[2px] self-stretch bg-gradient-to-tr from-transparent via-neutral-400 to-transparent opacity-25"></div>
+                    <div className="m-auto hidden xs:block md:hidden">
+                        <Social/>
+                    </div>
+                    <div className="hidden sm:block md:hidden w-[2px] self-stretch bg-gradient-to-tr from-transparent via-neutral-400 to-transparent opacity-25"></div>
+                    <div className="hidden sm:block md:hidden m-auto">
+                        <Logo />
+                    </div>
                 </div>
-                <div className="my-auto">
-                    <SocialButtons />
+                <div className="m-auto xs:hidden">
+                    <Social />
                 </div>
-                {/* <div className="w-px self-stretch bg-gradient-to-tr from-transparent via-neutral-500 to-transparent opacity-25 dark:via-neutral-400"></div> */}
-                <div className="my-auto">
+                <div className="sm:hidden md:block lg:hidden h-[2px] self-stretch bg-gradient-to-tr from-transparent via-neutral-400 to-transparent opacity-25"></div>
+                <div className="m-auto sm:hidden md:block lg:hidden">
                     <Logo />
                 </div>
             </div>
         </div>
-        // <div className="mt-auto min-w-screen w-full bg-[#4E5152] text-white">
-        //     <div className="overflow-hidden flex flex-col py-[1rem] sm:grid sm:grid-cols-8 sm:grid-flow-row lg:grid-cols-12">
-        //         <div className="w-fit mx-auto sm:col-span-4 sm:px-[1rem] sm:row-span-2 lg:col-span-5 xl:col-span-6">
-        //             <div className="mb-[1rem]">
-        //                 <SocialButtons />
-        //             </div>
-        //             <div className="">
-        //                 <ContactButtons />
-        //             </div>
-        //         </div>
-        //         <div className="sm:col-start-5 sm:col-span-4 sm:row-span-1 sm:row-start-1 sm:mx-auto lg:col-span-5 lg:col-start-8 xl:col-span-6 xl:col-start-7">
-        //             <SubscribeButton />
-        //         </div>
-        //         <div className="sm:m-auto sm:col-span-2 sm:col-start-7 sm:row-span-1 sm:row-start-2 md:mt-[1rem] lg:col-span-3 lg:col-start-10 lg:ml-auto lg:justify-self-end">
-        //             <Logo />
-        //         </div>
-        //     </div>
-        // </div>
     )
 }
 

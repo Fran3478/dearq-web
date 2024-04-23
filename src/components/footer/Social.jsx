@@ -1,12 +1,10 @@
-import { BsInstagram, BsFacebook, BsTwitterX, BsLinkedin } from "react-icons/bs";
+import { BsInstagram, BsFacebook } from "react-icons/bs";
 
 const Social = () => {
     return (
-        <div className="flex w-full text-2xl">
-            <a className="mx-[1rem]" href="https://www.instagram.com/andromeda.crea/" target="_blank" rel="noreferrer"><BsInstagram /></a>
-            <a className="mx-[1rem]" href="" target="_blank" rel="noreferrer" ><BsFacebook /></a>
-            <a className="mx-[1rem]" href="" target="_blank" rel="noreferrer" ><BsTwitterX /></a>
-            <a className="mx-[1rem]" href="" target="_blank" rel="noreferrer" ><BsLinkedin /></a>
+        <div className="flex gap-[1rem] xs:flex-col xs:gap-[1.5rem] sm:gap-[1rem] xl:flex-row xl:gap-[2rem] w-full text-2xl">
+            <a className="" href="https://www.instagram.com/andromeda.crea/" target="_blank" rel="noreferrer"><BsInstagram /></a>
+            <a className="" href="" target="_blank" rel="noreferrer" ><BsFacebook /></a>
         </div>
     )
 }
