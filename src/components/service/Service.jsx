@@ -105,29 +105,21 @@ const Service = () => {
         }
     ]
     return (
-        <div className="">
-            <div className="flex flex-col max-w-max m-auto">
-                <p className="w-fit mt-[2rem]">En DEArq nos encanta que te sientas comodo y conectado con tu hogar, por lo que te ofrecemos un servicio integral de diseño que abarca:</p>
-                <Container items={serviceData} type={"service"}/>
+        <div className="min-w-screen w-full my-auto">
+            <div className="flex flex-col justify-center m-auto xs:mx-[2rem] mt-[2rem]">
+                <h1 className="text-4xl font-bold w-fit m-auto" >Servicios</h1>
+                <div className="w-fit m-auto">
+                    <p className="w-fit mt-[2rem] mx-[2rem] xs:mx-0">En DEArq nos encanta que te sientas comodo y conectado con tu hogar, por lo que te ofrecemos un servicio integral de diseño que abarca:</p>
+                    <Container items={serviceData} type={"service"}/>
+                </div>
             </div>
-            {/* <div className="grid grid-cols-3 gap-[5rem] w-fit m-auto my-[3rem]">
-                {
-                    serviceData.map((item) => (
-                        <Card key={item.id} title={item.title} imgUrl={item.imgUrl} alt={item.alt} text={item.text} />
-                    ))
-                }
-            </div> */}
-            <div className="flex flex-col max-w-max m-auto">
-                <p className="w-fit mt-[2rem]">Para ofrecerte nuestros increíbles servicios utilizamos variadas herramientas de diseño para brindarte la mejor experiencia posible adaptando a tus necesidades:</p>
-                <Container items={toolData} type={"tool"}/>
+            <div className="flex flex-col justify-center m-auto xs:mx-[2rem] mt-[3rem]">
+                <h1 className="text-4xl font-bold w-fit m-auto" >Herramientas</h1>
+                <div className="w-fit m-auto">
+                    <p className="w-fit mt-[2rem] mx-[2rem] xs:mx-0">Para ofrecerte nuestros increíbles servicios utilizamos variadas herramientas de diseño para brindarte la mejor experiencia posible adaptando a tus necesidades:</p>
+                    <Container items={toolData} type={"tool"}/>
+                </div>
             </div>
-            {/* <div className="grid grid-cols-4 gap-[4rem] w-fit m-auto my-[3rem]">
-                {
-                    toolData.map((item) => (
-                        <Card key={item.id} title={item.title} imgUrl={item.imgUrl} alt={item.alt} text={item.text} />
-                    ))
-                }
-            </div> */}
         </div>
     )
 }

@@ -1,18 +1,13 @@
 import ColumnView from "./ColumnView"
-import ColumnView_v2 from "./ColumnView_v2"
-import ColumnView_v15 from "./ColumnView_v15"
-import ColumnView_v25 from "./ColumnView_v25"
-import ColumnView_v3 from "./ColumnView_v3"
-import ColumnView_v4 from "./ColumnView_v4"
 import Quote from "./Quote"
-
-// import Carrusel from "../carrusel/Carrusel"
+import SDView from "./SDView"
 
 const Home = () => {
     const slides = [
         {
             id: "1",
             url: "https://res.cloudinary.com/dacbde3so/image/upload/v1711567499/dearq-img/home/twj2aqun2ymhnlmihux5.webp",
+            alt: "",
             title: "Espacios conscientemente diseñados"
         },
         {
@@ -42,16 +37,19 @@ const Home = () => {
 
     return (
         <div className="min-w-screen w-full">
-            {/* <Carrusel slides={slides} autoSlide={true} /> */}
-            <h1 className="text-3xl md:text-5xl font-tt-commons-pro-expanded-bold font-bold w-fit m-auto my-[2rem]">Diseño emocional arquitectónico</h1>
-            
+            <h1 className="text-3xl md:text-5xl font-tt-commons-pro-expanded-bold font-bold w-fit m-auto my-[2rem] text-center">Diseño emocional arquitectónico</h1>
             <div className="mt-[4rem]">
-                <ColumnView_v25 columns={slides}/>
+                <div className="hidden lg:block">
+                    <ColumnView columns={slides}/>
+                </div>
+                <div className="lg:hidden">
+                    <SDView columns={slides} />
+                </div>
             </div>
             
 
             <div className="font-tt-commons-pro-expanded-bold relative pb-[2rem]">
-                <div className="w-full">
+                <div className="w-full px-[1rem]">
                     <div className="py-[1.5rem] md:w-[85%] lg:w-[85%] m-auto rounded-md">
                         <h2 className="text-4xl w-fit m-auto pb-[1rem]">¿Qué es <span className="font-semibold">DEArq</span>?</h2>
                         <p className="tracking-tight leading-tight">DEArq es mucho más que un estudio de arquitectura, es un espacio donde convergen la pasión por el diseño y el profundo deseo de ayudar a las personas a través de la transformación de sus entornos físicos. Utilizando los principios de la neuroarquitectura, <span className="font-semibold">nos especializamos en crear espacios auténticos y significativos que promueven la sanación, el equilibrio emocional y la sensación de bienestar</span>.</p>

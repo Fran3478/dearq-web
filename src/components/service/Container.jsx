@@ -5,7 +5,7 @@ import CardTool from "./CardTool"
 const Container = ({items, type}) => {
 
     return(
-        <div className={`grid ${type ==="service" ? "grid-cols-3 gap-[5rem]" : type === "tool" && "grid-cols-4 gap-[4rem]" } w-fit m-auto my-[3rem]`}>
+        <div className={`grid ${type ==="service" ? "grid-cols-1 sm:grid-cols-2 lg-1:grid-cols-3 3xl:grid-cols-4 4xl:grid-cols-5 5xl:grid-cols-6 gap-[2rem] md:gap-[4rem] lg-1:gap-[2.5rem] xl:gap-[5rem]" : type === "tool" && "grid-cols-1 sm:grid-cols-2 lg-1:grid-cols-3 xl:grid-cols-4 3xl:grid-cols-5 4xl:grid-cols-7 5xl:grid-cols-8 gap-[2rem] xl:gap-[4rem]" } w-fit m-auto my-[3rem]`}>
             {
                 type === "service" ?
                     items.map((item) => (
@@ -23,7 +23,7 @@ const Container = ({items, type}) => {
 
 Container.propTypes = {
     items: PropTypes.arrayOf(PropTypes.object),
-    type: PropTypes.string
+    type: PropTypes.oneOf(["service", "tool"])
 }
 
 export default Container

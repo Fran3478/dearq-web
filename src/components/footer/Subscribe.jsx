@@ -10,10 +10,12 @@ const Subscribe = () => {
     }
 
     return (
-        <div className="">
-            <p className="max-w-fit mb-[0.5rem] text-sm md:text-base font-semibold">Para no perderte las novedades e información:</p>
+        <div className="max-w-full md:max-w-[30rem] w-full m-auto">
+            <p className="mb-[0.5rem] text-sm md:text-base font-semibold">Para no perderte las novedades e información:</p>
             <div className="flex flex-nowrap">
-                <input className="p-[0.5rem] mr-[1rem] rounded-md text-black outline-none" type="email" name="email" id="email" placeholder="Ingrese su email" value={email} onChange={handleChange} />
+                <div className="grow mr-[0.5rem]">
+                    <input className="w-full p-[0.5rem] rounded-md text-black outline-none" type="email" name="email" id="email" placeholder="Ingrese su email" value={email} onChange={handleChange} />
+                </div>
                 <SmallButton text={"Suscribirse"} icon={<AiOutlineSend/>} appearance={"dark"}/>
             </div>
         </div>
