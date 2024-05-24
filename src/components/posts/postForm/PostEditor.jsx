@@ -73,7 +73,7 @@ const PostEditor = ({ initialValue = "<p></p>" }) => {
           const webpFile = new Blob([ab], { type: mimeString });
           const url = `https://api.cloudinary.com/v1_1/${import.meta.env.VITE_CLUDINARY_CLOUD}/upload`
           const fd = new FormData()
-          fd.append("upload_preset", "import.meta.env.VITE_CLUDINARY_PRESET")
+          fd.append("upload_preset", import.meta.env.VITE_CLUDINARY_PRESET)
           fd.append("file", webpFile, 'image.webp')
           progress(70)
           axios.post(url, fd)
