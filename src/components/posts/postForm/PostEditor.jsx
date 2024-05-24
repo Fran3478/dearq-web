@@ -73,7 +73,7 @@ const PostEditor = ({ initialValue = "<p></p>" }) => {
           const webpFile = new Blob([ab], { type: mimeString });
           const url = `https://api.cloudinary.com/v1_1/${import.meta.env.VITE_CLUDINARY_CLOUD}/upload`
           const fd = new FormData()
-          fd.append("upload_preset", "import.meta.env.VITE_CLUDINARY_PRESET")
+          fd.append("upload_preset", import.meta.env.VITE_CLUDINARY_PRESET)
           fd.append("file", webpFile, 'image.webp')
           progress(70)
           axios.post(url, fd)
@@ -103,7 +103,7 @@ const PostEditor = ({ initialValue = "<p></p>" }) => {
           language: 'es',
           menubar: false,
           plugins: 'importcss autolink autosave save directionality visualblocks visualchars image link media codesample charmap nonbreaking insertdatetime advlist lists charmap quickbars emoticons',
-          toolbar: 'undo redo | bold italic underline strikethrough | fontfamily fontsize | alignleft aligncenter alignright alignjustify | outdent indent |  numlist bullist | forecolor backcolor removeformat | charmap emoticons | quickimage media',
+          toolbar: 'undo redo | bold italic underline strikethrough | fontfamily fontsize | alignleft aligncenter alignright alignjustify | outdent indent |  numlist bullist | forecolor backcolor removeformat | charmap emoticons | quickimage media link',
           file_picker_types: 'image',
           file_picker_callback: (callback, value, meta) => {
             if (meta.filetype === 'image') {
