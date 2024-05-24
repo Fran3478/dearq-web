@@ -103,7 +103,7 @@ const PostEditor = ({ initialValue = "<p></p>" }) => {
           language: 'es',
           menubar: false,
           plugins: 'importcss autolink autosave save directionality visualblocks visualchars image link media codesample charmap nonbreaking insertdatetime advlist lists charmap quickbars emoticons',
-          toolbar: 'undo redo | bold italic underline strikethrough | fontfamily fontsize | alignleft aligncenter alignright alignjustify | outdent indent |  numlist bullist | forecolor backcolor removeformat | charmap emoticons | quickimage media',
+          toolbar: 'undo redo | bold italic underline strikethrough | fontfamily fontsize | alignleft aligncenter alignright alignjustify | outdent indent |  numlist bullist | forecolor backcolor removeformat | charmap emoticons | quickimage media link',
           file_picker_types: 'image',
           file_picker_callback: (callback, value, meta) => {
             if (meta.filetype === 'image') {
