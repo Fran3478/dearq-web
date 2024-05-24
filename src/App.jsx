@@ -7,6 +7,7 @@ import About from "./components/about/About"
 import Service from "./components/service/Service"
 import Contact from "./components/contact/Contact"
 import Blog from "./components/blog/Blog"
+import PostForm from "./components/posts/postForm/PostForm"
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/services" element={<Service />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/blog" element={<Blog/>} />
+        <Route path="/new-post" element={< PostForm/>} />
         <Route path="/*" element={<NotFound />} />
       </Routes>
       <Footer />
