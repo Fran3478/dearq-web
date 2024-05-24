@@ -3,7 +3,7 @@ const PostForm = () => {
 
 
     return(
-        <div className="min-w-screen m-auto my-[4rem]">
+        <div className="min-w-screen m-auto py-[4rem]">
             <PostEditor/>
         </div>
     )
