@@ -1,6 +1,6 @@
-import ColumnView from "./ColumnView"
-import Quote from "./Quote"
-import SDView from "./SDView"
+import ColumnView from "../../components/home/ColumnView"
+import Quote from "../../components/home/Quote"
+import SDView from "../../components/home/SDView"
 
 const Home = () => {
     const slides = [

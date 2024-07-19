@@ -1,4 +1,4 @@
-import Post from "./Post"
+import Post from "../../components/blog/Post"
 
 const Blog = () => {
     const posts = [

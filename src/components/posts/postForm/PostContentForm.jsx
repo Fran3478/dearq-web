@@ -3,8 +3,12 @@ import { useRef, useState } from 'react'
 import { Editor } from '@tinymce/tinymce-react'
 import Resizer from 'react-image-file-resizer'
 import axios from 'axios'
+import Button from "../../buttons/Button"
+import { usePostForm } from "../../../hooks/usePostForm"
 
-const PostEditor = ({ initialValue = "<p></p>" }) => {
+const PostContentForm = ({ initialValue = "<p></p>" }) => {
+  const {handleSavePost} = usePostForm()
+
   const editorRef = useRef(null);
   const [dirty, setDirty] = useState(false);
 
@@ -37,13 +41,12 @@ const PostEditor = ({ initialValue = "<p></p>" }) => {
     return json
   }
 
-  const save = () => {
+  const save = async () => {
     if (editorRef.current) {
       const content = editorRef.current.getContent();
-      const jsonContent = htmlToJson(content)
+      await handleSavePost(content)
       setDirty(false);
-      editorRef.current.setDirty(false);
-      console.log(jsonContent);
+      editorRef.current.setDirty(false)
     }
   };
   
@@ -118,14 +121,17 @@ const PostEditor = ({ initialValue = "<p></p>" }) => {
           content_style: 'body { font-family:Arial,sans-serif; font-size:14px }'
         }}
       />
-      <button onClick={save} disabled={!dirty}>Guardar</button>
-      {dirty && <p>Hay cambios sin guardar</p>}
+      <div className="m-auto">
+        <Button handleClick={save} text={"Guardar"} disabledButton={!dirty} />
+        
+      </div>
+      {/* {dirty && <p>Hay cambios sin guardar</p>} */}
     </>
   );
 }
 
-PostEditor.propTypes = {
+PostContentForm.propTypes = {
     initialValue: PropTypes.string
 }
 
-export default PostEditor
+export default PostContentForm
