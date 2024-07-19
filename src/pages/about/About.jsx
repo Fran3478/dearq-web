@@ -1,6 +1,6 @@
-import UserImage from "./UserImage"
+import UserImage from "../../components/about/UserImage"
 import user from "../../assets/user.png"
-import AboutSection from "./AboutSection"
+import AboutSection from "../../components/about/AboutSection"
 import data from "../../assets/data/data.json"
 
 const About = () => {
