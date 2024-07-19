@@ -1,4 +1,4 @@
-import Container from "./Container"
+import Container from "../../components/service/Container"
 
 const Service = () => {
     const serviceData = [

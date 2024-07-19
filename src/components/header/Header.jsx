@@ -3,6 +3,7 @@ import logo from "../../assets/svg/dearq-logo.svg"
 import Navbar from "../navbar/Navbar"
 import MenuButton from "../navbar/MenuButton"
 import MenuContent from "../navbar/MenuContent"
+import AuthBar from "../bars/AuthBar"
 
 const Header = () => {
     const [activeMenu, setActiveMenu] = useState(false)
@@ -11,7 +12,7 @@ const Header = () => {
     }
     return (
         <>
-            <div className="sticky top-0 left-0 min-w-screen w-full h-[3.5rem] sm:h-[5rem] md:h-[9rem] lg:h-[4rem] flex md:flex-col lg:flex-row p-3 bg-gray-50 shadow-md shadow-black/10 select-none z-20">
+            <header className="sticky top-0 left-0 min-w-screen w-full h-[3.5rem] sm:h-[5rem] md:h-[9rem] lg:h-[4rem] flex md:flex-col lg:flex-row p-3 bg-gray-50 shadow-md shadow-black/10 select-none z-20">
                 <div className="flex md:hidden">
                     <MenuButton handleActiveMenu={handleActiveMenu} activeMenu={activeMenu} />
                 </div>
@@ -20,7 +21,8 @@ const Header = () => {
                     <img className="w-7 sm:w-10 pointer-events-none" src={logo} alt="DEArq-logo" />
                 </div>
                 <Navbar />
-            </div>
+                <AuthBar/>
+            </header>
             <div className={`fixed z-10 min-w-screen ${!activeMenu && "-top-full"} transition-all duration-300`}>
                 <MenuContent handleActiveMenu={handleActiveMenu} activeMenu={activeMenu} />
             </div>
