@@ -1,18 +1,14 @@
 import { createContext, useState } from "react"
 import PropTypes from "prop-types"
 
-const checkUser = () => {
-    const token = localStorage.getItem("_token")
-    const user = JSON.parse(localStorage.getItem("_user"))
-    return token && user ? user : null
-}
-
 export const AuthContext = createContext()
 
 export const AuthProvider = ({ children }) => {
-    const [user, setUser] = useState(checkUser)
+    const [user, setUser] = useState(null)
+    const [token, setToken] = useState(null)
+
     return(
-        <AuthContext.Provider value={{user, setUser}}>
+        <AuthContext.Provider value={{user, setUser, token, setToken}}>
             {children}
         </AuthContext.Provider>
     )
