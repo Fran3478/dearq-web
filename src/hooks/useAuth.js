@@ -1,12 +1,14 @@
-import { useContext } from "react"
-import { AuthContext } from "../context/auth"
 import axios from "axios"
 import { jwtDecode } from "jwt-decode"
 import { useNavigate } from "react-router-dom"
+import useToken from "./useToken"
+import useUser from "./useUser"
 
 export const useAuth = () => {
-    const {user, setUser} = useContext(AuthContext)
+    
     const navigate = useNavigate()
+    const {saveToken, removeToken} = useToken()
+    const {user, saveUser, removeUser} = useUser()
 
     const login = async ({username, password}) => {
         try {
@@ -15,9 +17,8 @@ export const useAuth = () => {
             const decoded = jwtDecode(token)
             const role = decoded._role
             const loggedUser = {username: response.data.user, role}
-            localStorage.setItem('_token', token)
-            localStorage.setItem("_user", JSON.stringify(loggedUser))
-            setUser(loggedUser)
+            saveToken(token)
+            saveUser(loggedUser)
             return {login: true, user: loggedUser}
         } catch (err) {
             console.log(err)
@@ -28,9 +29,8 @@ export const useAuth = () => {
 
     const logout = () => {
         try {
-            localStorage.removeItem("_token")
-            localStorage.removeItem("_user")
-            setUser(null)
+            removeToken()
+            removeUser()
             navigate("/home")
             return {logout: true}
         } catch (err) {
@@ -53,6 +53,7 @@ export const useAuth = () => {
     }
 
     const isAuthenticated = () => {
+        console.log(user)
         return user && user.role && user.username
     }
 

@@ -1,5 +1,7 @@
 import { Suspense } from "react"
 import { BrowserRouter, Outlet, Route, Routes } from "react-router-dom"
+import axios from "axios"
+import useToken from "../hooks/useToken.js"
 import Home from "../pages/home/Home.jsx"
 import About from "../pages/about/About"
 import Service from "../pages/service/Service.jsx"
@@ -19,11 +21,25 @@ import PostDetail from "../components/posts/postView/PostDetail.jsx"
 import DefaultView from "../components/posts/postView/DefaultView.jsx"
 import CreatePost from "../pages/posts/CreatePost.jsx"
 import PostControl from "../components/posts/postView/PostControl.jsx"
+import Spinner from "../components/spinner/Spinner.jsx"
 
 const AllRoutes = () => {
+    const {token} = useToken()
+
+    axios.interceptors.request.use(
+        config => {
+            if(token && !config.skipAuth) {
+                config.headers.Authorization = `Bearer ${token}`
+            }
+            return config
+        },
+        error => {
+            return Promise.reject(error)
+        }
+    )
 
     return(
-        <Suspense fallback={<div className="border-gray-300 h-20 w-20 animate-spin rounded-full border-8 border-t-blue-600" />}>
+        <Suspense fallback={<Spinner/>}>
             <BrowserRouter>
                 <Routes>
                     <Route path="/" element={<Root/>}>
