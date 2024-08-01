@@ -21,7 +21,8 @@ export default {
     },
     extend: {
       fontFamily: {
-        'tt-commons-pro-expanded-bold': ['TT Commons Pro Expanded Bold', 'sans-serif'],
+        'lastica': ['Lastica', 'sans-serif'],
+        'segoe': ['Segoe Script', 'sans-serif'],
       },
       boxShadow: {
         "innerFull": "inset 0px 0px 9px 0px rgb(0 0 0 / 0.3)"

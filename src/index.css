@@ -1,3 +1,21 @@
+@font-face {
+    font-family: 'Lastica';
+    src: url('/fonts/lastica.woff2') format('woff2'),
+         url('/fonts/lastica.woff') format('woff'),
+         url('/fonts/lastica.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Segoe Script';
+    src: url('/fonts/segoe-script.woff2') format('woff2'),
+         url('/fonts/segoe-script.woff') format('woff'),
+         url('/fonts/segoe-script.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
