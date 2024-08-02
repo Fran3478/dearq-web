@@ -1,15 +1,24 @@
-import { useState } from "react"
+import { useEffect } from "react"
 import PostBar from "../../bars/PostBar"
 import PostDetail from "./PostDetail"
+import usePrivatePost from "../../../hooks/usePrivatePost"
+import Notif from "../../notif/Notif"
+import { useParams } from "react-router-dom"
 
 const PostControl = () => {
-
-    const [published, setPublished] = useState(false)
+    const {id} = useParams()
+    const {getPost} = usePrivatePost()
+    useEffect(() => {
+        getPost(id)
+    },[id])
 
     return(
-        <div className="w-full">
-            <PostBar published={published}/>
-            <PostDetail setPublished={setPublished} />
+        <div className="w-full relative">
+            <PostBar/>
+            <PostDetail/>
+            {/* {
+                notif && <Notif notif={notif} handleClose={() => setNotif(null)}/>
+            } */}
         </div>
     )
 }
