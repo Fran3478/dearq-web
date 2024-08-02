@@ -23,7 +23,7 @@ const Blog = () => {
             {
                 data.posts.length !== 0 ? (
                     data.posts.map((post, i) => (
-                        <Post key={post.id} post={post.postView} odd={Math.floor((i+1)%2)} />
+                        <Post key={post.id} id={post.id} post={post.postView} odd={Math.floor((i+1)%2)} />
                     ))
                 ) : 
                 (
