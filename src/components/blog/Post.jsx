@@ -2,9 +2,12 @@ import PropTypes from "prop-types"
 import Button from "../buttons/Button"
 import ImageTitled from "./ImageTitled"
 import { AiOutlineArrowRight } from "react-icons/ai"
+import { useNavigate } from "react-router-dom"
 
 
-const Post = ({post, odd, preview = false}) => {
+const Post = ({id, post, odd, preview = false}) => {
+
+    const navigate = useNavigate()
 
     return(
         <div className={`py-[1.5rem] md:py-[3rem] lg:py-[5rem] ${!odd && "bg-[#dfb15b] bg-opacity-15"}`}>
@@ -21,7 +24,7 @@ const Post = ({post, odd, preview = false}) => {
                     <div className="w-full xs:w-[85%] m-auto flex flex-col">
                         <p className="sm:text-lg md:text-xl" >{post.description || preview && "Descripción de la publicación"}</p>
                         <div className="m-auto md:ml-0 mt-[2rem] lg-1:mt-[3rem]">
-                            <Button text={"Leer más"} icon={<AiOutlineArrowRight/>}/>
+                            <Button text={"Leer más"} icon={<AiOutlineArrowRight/>} handleClick={() => navigate(`/post/${id}`)}/>
                         </div>
                     </div>
                 </div>
@@ -32,6 +35,7 @@ const Post = ({post, odd, preview = false}) => {
 }
 
 Post.propTypes = {
+    id: PropTypes.string,
     post: PropTypes.object,
     odd: PropTypes.number,
     preview: PropTypes.bool

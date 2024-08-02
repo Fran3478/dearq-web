@@ -7,7 +7,7 @@ import { useParams } from "react-router-dom"
 
 const PostControl = () => {
     const {id} = useParams()
-    const {getPost} = usePrivatePost()
+    const {post, getPost} = usePrivatePost()
     useEffect(() => {
         getPost(id)
     },[id])
@@ -15,7 +15,7 @@ const PostControl = () => {
     return(
         <div className="w-full relative">
             <PostBar/>
-            <PostDetail/>
+            <PostDetail post={post} />
             {/* {
                 notif && <Notif notif={notif} handleClose={() => setNotif(null)}/>
             } */}

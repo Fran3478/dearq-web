@@ -1,11 +1,9 @@
 import parse from "html-react-parser"
 import PropTypes from "prop-types"
 import { useEffect, useState } from "react"
-import usePrivatePost from "../../../hooks/usePrivatePost"
 
-const PostDetail = () => {
+const PostDetail = ({post}) => {
 
-    const {post} = usePrivatePost()
     const [loading, setLoading] = useState(true)
 
     useEffect(() => {
@@ -32,8 +30,7 @@ const PostDetail = () => {
 }
 
 PostDetail.propTypes = {
-    published: PropTypes.bool,
-    setPublished: PropTypes.func
+    post: PropTypes.object
 }
 
 export default PostDetail
