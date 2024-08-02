@@ -4,10 +4,10 @@ import PropTypes from "prop-types"
 export const PrivatePostsContext = createContext()
 
 export const PrivatePostsProvider = ({ children }) => {
-    const [posts, setPosts] = useState(null)
+    const [data, setData] = useState(null)
 
     return(
-        <PrivatePostsContext.Provider value={{posts, setPosts}}>
+        <PrivatePostsContext.Provider value={{data, setData}}>
             {children}
         </PrivatePostsContext.Provider>
     )
