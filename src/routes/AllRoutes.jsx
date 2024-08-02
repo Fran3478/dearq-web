@@ -21,6 +21,7 @@ import DefaultView from "../components/posts/postView/DefaultView.jsx"
 import CreatePost from "../pages/posts/CreatePost.jsx"
 import PostControl from "../components/posts/postView/PostControl.jsx"
 import Spinner from "../components/spinner/Spinner.jsx"
+import PublicPostView from "../pages/posts/PublicPostView.jsx"
 
 const AllRoutes = () => {
     const {token} = useToken()
@@ -47,9 +48,8 @@ const AllRoutes = () => {
                         <Route path="about" element={<About/>} />
                         <Route path="services" element={<Service/>} />
                         <Route path="contact" element={<Contact/>} />
-                        <Route path="blog" element={<Blog/>}>
-                            <Route path="post/:id" element />
-                        </Route>
+                        <Route path="blog" element={<Blog/>}/>
+                        <Route path="post/:id" element={<PublicPostView/>} />
                         <Route path="auth" element={<Auth/>}>
                             <Route path="login" element={<LoginForm/>} />
                             <Route path="register" element={<RegisterForm/>} />

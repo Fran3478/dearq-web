@@ -1,18 +1,18 @@
 import axios from "axios"
 import { useEffect, useState } from "react"
 
-const useFetchPost = (url) => {
+const useFetchPost = (id) => {
     
-    const [data, setData] = useState(null)
+    const [post, setPost] = useState(null)
     const [loading, setLoading] = useState(true)
     const [error, setError] = useState(null)
 
     useEffect(() => {
         const fetchPost = async () => {
             try {
-                const response = await axios.get(url)
+                const response = await axios.get(`${import.meta.env.VITE_BASE_URL}/blog/get-post/${id}`)
                 console.log(response)
-                setData(response.data)
+                setPost(response.data)
             } catch (err) {
                 setError(err)
             } finally {
@@ -20,8 +20,8 @@ const useFetchPost = (url) => {
             }
         }
         fetchPost()
-    }, [url])
-    return {data, loading, error}
+    }, [id])
+    return {post, loading, error}
 }
 
 export default useFetchPost
