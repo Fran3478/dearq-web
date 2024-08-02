@@ -22,7 +22,7 @@ const DinamicColorButton = ({text, icon, handleClick, disabledButton = false, co
                 {text}
                 {
                     icon && (
-                        <span className="pl-[1rem] m-auto text-2xl">{icon}</span>
+                        <span className="m-auto text-2xl">{icon}</span>
                     )
                 }
             </p>
