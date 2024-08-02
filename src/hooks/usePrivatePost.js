@@ -1,16 +1,15 @@
 import axios from "axios"
 import { useContext, useState } from "react"
 import { PrivatePostContext } from "../context/privatePost"
-import { useNavigate } from "react-router-dom"
+import usePrivatePosts from "./usePrivatePosts"
 
 const usePrivatePost = () => {
 
     const {post, setPost} = useContext(PrivatePostContext)
+    const {updatePublishedPost} = usePrivatePosts()
 
     const [notif, setNotif] = useState(null)
     const [error, setError] = useState(null)
-
-    const navigate = useNavigate()
 
     const fetchGet = async (url) => {
         try {
@@ -51,8 +50,9 @@ const usePrivatePost = () => {
             const publish = await fetchPost(`${import.meta.env.VITE_BASE_URL}/admin/blog/publish-post/${id}`)
             console.log(publish)
             if(publish.status === 200) {
+                updatePublishedPost(id)
+                setPost({...post, published: true})
                 setNotif({type: "ok", info: publish.data.message})
-                navigate(0)
             } else if(publish.status === 409) {
                 setNotif({type: "warn", title: "No se pudo publicar", info: publish.err})
             } else {
