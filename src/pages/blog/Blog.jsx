@@ -13,7 +13,6 @@ const Blog = () => {
 
     useEffect(() => {
         if(data?.posts) setLoading(false)
-            console.log(data.posts)
     },[data])
 
     if(loading) return(<p>loading</p>
