@@ -1,19 +1,24 @@
-import useFetchPosts from "../../../hooks/useFetchPosts"
+import { useEffect, useState } from "react"
+import usePrivatePosts from "../../../hooks/usePrivatePosts"
 import AdminPostItemSkeleton from "../../loading/AdminPostItemSkeleton"
 import PostItem from "./PostItem"
 
 const PostList = () => {
+
+    const {data} = usePrivatePosts()
+
+    const [loading, setLoading] = useState(true)
+
+    useEffect(() => {
+        if(data?.posts) setLoading(false)
+            console.log(data)
+    },[data])
     
-    const {data, loading, error} = useFetchPosts(`${import.meta.env.VITE_BASE_URL + import.meta.env.VITE_ADMIN_ALL_POSTS_URL}`)
 
     if(loading) {
         return (
             <AdminPostItemSkeleton/>
         )
-    }
-
-    if(error) {
-        return <div>Error: {error.message}</div>
     }
     
     return(
