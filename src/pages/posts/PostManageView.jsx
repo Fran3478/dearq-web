@@ -1,7 +1,15 @@
 import { Outlet } from "react-router-dom"
 import PostList from "../../components/admin/postManagement/PostList"
+import usePrivatePosts from "../../hooks/usePrivatePosts"
+import { useEffect } from "react"
 
 const PostManageView = () => {
+
+    const {getPosts} = usePrivatePosts()
+
+    useEffect(() => {
+        getPosts()
+    },[])
 
     return(
         <div className="flex flex-grow">

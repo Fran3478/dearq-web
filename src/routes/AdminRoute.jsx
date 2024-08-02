@@ -1,6 +1,8 @@
 import { Outlet } from "react-router-dom"
 import { useAuth } from "../hooks/useAuth"
 import NotAllow from "../components/errors/NotAllow"
+import { PrivatePostsProvider } from "../context/privatePosts"
+import { PrivatePostProvider } from "../context/privatePost"
 
 const AdminRoute = () => {
 
@@ -12,7 +14,11 @@ const AdminRoute = () => {
 
     return(
         <>
-            <Outlet/>
+            <PrivatePostsProvider>
+                <PrivatePostProvider>
+                    <Outlet/>
+                </PrivatePostProvider>
+            </PrivatePostsProvider>
         </>
     )
 }

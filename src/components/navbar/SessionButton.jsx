@@ -1,25 +1,25 @@
-import { useAuth } from "../../hooks/useAuth"
-import AuthButton from "../buttons/AuthButton"
-import UserButton from "../buttons/UserButton"
-import Popover from "../popover/Popover"
+import { useNavigate } from "react-router-dom"
 import AdminPopover from "../popover/AdminPopover"
 import UserPopover from "../popover/UserPopover"
+import { useAuth } from "../../hooks/useAuth"
+import AuthButton from "../buttons/AuthButton"
+import Popover from "../popover/Popover"
 import CommonPopover from "../popover/CommonPopover"
-import { useNavigate } from "react-router-dom"
+import UserButton from "../buttons/UserButton"
 
 const COMPONENT_MAP = {
     user: UserPopover,
-    admin: AdminPopover 
+    admin: AdminPopover
 }
 
-const AuthBar = () => {
+const SessionButton = () => {
 
     const navigate = useNavigate()
     const {isAuthenticated, isAdmin} = useAuth()
-    if(!isAuthenticated()) return <AuthButton text={"Iniciar Sesión"} handleClick={() => navigate("/auth/login")}/>
 
+    if(!isAuthenticated()) return <AuthButton text={"Iniciar Sesión"} handleClick={() => navigate("/auth/login")} />
+    
     const userType = isAdmin() ? "admin" : "user"
-
     const Component = COMPONENT_MAP[userType]
 
     return(
@@ -33,4 +33,4 @@ const AuthBar = () => {
     )
 }
 
-export default AuthBar
+export default SessionButton

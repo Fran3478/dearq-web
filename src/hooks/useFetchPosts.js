@@ -13,6 +13,7 @@ const useFetchPosts = (url) => {
 
     useEffect(() => {
         const fetchPosts = async () => {
+            setLoading(true)
             try {
                 const response = await axios.get(url)
                 setData({
