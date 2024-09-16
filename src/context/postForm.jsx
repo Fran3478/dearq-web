@@ -1,26 +1,29 @@
 import { createContext, useState } from "react";
-import PropTypes from "prop-types"
+import PropTypes from "prop-types";
 
-export const PostFormContext = createContext()
+export const PostFormContext = createContext();
 
-export const PostFormProvider = ({children}) => {
-    const [viewData, setViewData] = useState({
-        title: "",
-        img: "",
-        imgUrl: "",
-        img_title: "",
-        description: ""
-    })
+export const PostFormProvider = ({ children }) => {
+  const [viewData, setViewData] = useState({
+    title: "",
+    img: "",
+    imgUrl: "",
+    img_title: "",
+    description: "",
+    categories: [],
+  });
 
-    const [content, setContent] = useState("")
+  const [content, setContent] = useState("");
 
-    return(
-        <PostFormContext.Provider value={({viewData, setViewData, content, setContent})}>
-            {children}
-        </PostFormContext.Provider>
-    )
-}
+  return (
+    <PostFormContext.Provider
+      value={{ viewData, setViewData, content, setContent }}
+    >
+      {children}
+    </PostFormContext.Provider>
+  );
+};
 
 PostFormProvider.propTypes = {
-    children: PropTypes.node.isRequired
-}
+  children: PropTypes.node.isRequired,
+};
