@@ -4,13 +4,20 @@ import Resizer from "react-image-file-resizer";
 import axios from "axios";
 
 export const usePostForm = () => {
-  const { viewData, setViewData, content, setContent } =
-    useContext(PostFormContext);
+  const { viewData, setViewData, content } = useContext(PostFormContext);
 
   const [error, setError] = useState({
     view: null,
     content: null,
   });
+
+  const removeViewImage = () => {
+    setViewData({
+      ...viewData,
+      img: null,
+      imgUrl: null,
+    });
+  };
 
   const updateViewImage = (image) => {
     try {
@@ -76,6 +83,7 @@ export const usePostForm = () => {
     viewChange,
     handleSavePost,
     updateViewImage,
+    removeViewImage,
     error,
   };
 };
