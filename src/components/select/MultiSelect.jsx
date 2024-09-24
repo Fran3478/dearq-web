@@ -8,19 +8,27 @@ const MultiSelect = ({ values, text, setValues }) => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const selectRef = useRef(null);
 
+  useEffect(() => {
+    setOptions(values);
+  }, [values]);
+
   const handleInputChange = ({ target }) => {
     setFilter(target.value);
     setIsDropdownOpen(true);
   };
 
   const handleSelectOption = (option) => {
-    setSelectedOptions([...selectedOptions, option]);
+    const add = [...selectedOptions, option];
+    setSelectedOptions(add);
+    setValues(add);
     setOptions(options.filter((opt) => opt.id !== option.id));
     setFilter("");
   };
 
   const handleRemoveOption = (option) => {
-    setSelectedOptions(selectedOptions.filter((opt) => opt.id !== option.id));
+    const remove = selectedOptions.filter((opt) => opt.id !== option.id);
+    setSelectedOptions(remove);
+    setValues(remove);
     setOptions([...options, option]);
   };
 
@@ -118,6 +126,7 @@ const MultiSelect = ({ values, text, setValues }) => {
 MultiSelect.propTypes = {
   values: PropTypes.array.isRequired,
   text: PropTypes.string,
+  setValues: PropTypes.func.isRequired,
 };
 
 export default MultiSelect;
