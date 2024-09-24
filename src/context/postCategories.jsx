@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 export const PostCategoriesContext = createContext();
 
 export const PostCategoriesProvider = ({ children }) => {
-  const [categories, setCategories] = useState(null);
+  const [categories, setCategories] = useState([]);
 
   return (
     <PostCategoriesContext.Provider value={{ categories, setCategories }}>
