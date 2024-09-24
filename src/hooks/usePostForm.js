@@ -66,10 +66,17 @@ export const usePostForm = () => {
   const handleSavePost = async (content) => {
     try {
       const viewImageUrl = await uploadViewImage();
-      const postForm = { ...viewData, img: viewImageUrl, content };
+      const formData = {
+        title: viewData.title,
+        img: viewImageUrl,
+        img_title: viewData.img_title,
+        description: viewData.description,
+        categories: viewData.categories.map((cat) => cat.id),
+        content,
+      };
       const response = await axios.post(
         `${import.meta.env.VITE_BASE_URL}${import.meta.env.VITE_PRIVATE_URL}${import.meta.env.VITE_POST_URL}/new`,
-        postForm,
+        formData,
       );
       console.log(response);
     } catch (err) {
