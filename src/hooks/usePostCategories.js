@@ -1,5 +1,5 @@
 import axios from "axios";
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { PostCategoriesContext } from "../context/postCategories";
 
 export const usePostCategories = () => {
@@ -23,6 +23,13 @@ export const usePostCategories = () => {
       });
     }
   };
+
+  useEffect(() => {
+    if (!categories || categories.length === 0) {
+      getCategories();
+    }
+  }, [categories]);
+
   return {
     categories,
     getCategories,
