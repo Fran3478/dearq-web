@@ -1,27 +1,29 @@
-import { useContext, useEffect } from "react"
-import { AuthContext } from "../context/auth"
+import { useContext, useEffect, useState } from "react";
+import { AuthContext } from "../context/auth";
 
 const useToken = () => {
-    const {token, setToken} = useContext(AuthContext)
+  const { token, setToken } = useContext(AuthContext);
+  const [isTokenLoading, setIsTokenLoading] = useState(true);
 
-    useEffect(() => {
-        const storedToken = localStorage.getItem("_token")
-        if(storedToken) {
-            setToken(storedToken)
-        }
-    }, [setToken])
-
-    const saveToken = (newToken) => {
-        localStorage.setItem("_token", newToken)
-        setToken(newToken)
+  useEffect(() => {
+    const storedToken = localStorage.getItem("_token");
+    if (storedToken) {
+      setToken(storedToken);
     }
+    setIsTokenLoading(false);
+  }, [setToken]);
 
-    const removeToken = () => {
-        localStorage.removeItem("_token")
-        setToken(null)
-    }
+  const saveToken = (newToken) => {
+    localStorage.setItem("_token", newToken);
+    setToken(newToken);
+  };
 
-    return { token, saveToken, removeToken }
-}
+  const removeToken = () => {
+    localStorage.removeItem("_token");
+    setToken(null);
+  };
 
-export default useToken
+  return { token, saveToken, removeToken, isTokenLoading };
+};
+
+export default useToken;

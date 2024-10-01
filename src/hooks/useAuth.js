@@ -6,7 +6,7 @@ import useUser from "./useUser";
 
 export const useAuth = () => {
   const navigate = useNavigate();
-  const { saveToken, removeToken } = useToken();
+  const { saveToken, removeToken, isTokenLoading } = useToken();
   const { user, saveUser, removeUser } = useUser();
 
   const login = async ({ username, password }) => {
@@ -70,7 +70,6 @@ export const useAuth = () => {
   };
 
   const isAuthenticated = () => {
-    console.log(user);
     return user && user.role && user.username;
   };
 
@@ -113,5 +112,6 @@ export const useAuth = () => {
     isAdmin,
     validateEmail,
     resendEmail,
+    isTokenLoading,
   };
 };
