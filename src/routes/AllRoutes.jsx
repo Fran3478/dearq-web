@@ -22,7 +22,8 @@ import CreatePost from "../pages/posts/CreatePost.jsx";
 import PostControl from "../components/posts/postView/PostControl.jsx";
 import Spinner from "../components/spinner/Spinner.jsx";
 import PublicPostView from "../pages/posts/PublicPostView.jsx";
-import Dashboard from "../pages/dashboard/Dashboard.jsx";
+import Dashboard from "../components/admin/dashboard/Dashboard.jsx";
+import PostDashboard from "../components/admin/posts/PostDashboard.jsx";
 
 const AllRoutes = () => {
   const { token } = useToken();
@@ -75,7 +76,7 @@ const AllRoutes = () => {
               <Route index element={<Dashboard />} />
               <Route path="dashboard" element={<Dashboard />} />
               <Route path="notif" />
-              <Route path="posts" />
+              <Route path="posts" element={<PostDashboard />} />
               <Route path="store" />
               {/* <Route path="posts" element={<PostManageView />}>
                 <Route index element={<DefaultView />} />
